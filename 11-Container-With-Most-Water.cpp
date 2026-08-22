@@ -9,7 +9,7 @@ public:
         while (left < right) {
            int height=min(arr[right],arr[left]);
             int width=right-left;
-            int result=max(width*height);
+            int result=max(result,width*height);
             if(arr[left]<arr[right]){
                 left++;
             }
