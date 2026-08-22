@@ -7,16 +7,15 @@ public:
         int right = n - 1;
 
         while (left < right) {
-            int height = min(arr[left], arr[right]);
-            int width = right - left;
-            result = max(result, height * width);
-
-            if (arr[left] < arr[right]) {
+           int height=min(arr[right],arr[left]);
+            int width=right-left;
+            int result=max(width*height);
+            if(arr[left]<arr[right]){
                 left++;
-            } else {
-                right--;
             }
-        }
+            else{
+                right--
+            }
 
         return result;
     }
